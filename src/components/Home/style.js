@@ -33,9 +33,10 @@ Icons.Search = styled(search)`
 `;
 Icons.Bell = styled(bell)`
   /* margin-left: 20px; */
+  margin-right: 20px;
 `;
 Icons.Avatar = styled(avatar)`
-  margin-left: 20px;
+  cursor: pointer;
 `;
 const InputBox = styled.div`
   display: flex;

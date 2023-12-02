@@ -30,7 +30,7 @@ const Signup = () => {
     })
     .then((res)=> res.json())
     .then((res) => {
-      alert(JSON.stringify(res, "email"))
+      // alert(JSON.stringify(res, "email"))
       navigate('/signin')
       console.log(res);
     })

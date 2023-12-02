@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ReactComponent as edit } from "../../../assets/icons/edit.svg";
-import { ReactComponent as delet } from "../../../assets/icons/delete.svg";
+import { ReactComponent as edit } from "../../../assets/icons/edit-04.svg";
+import { ReactComponent as delet } from "../../../assets/icons/trash-01.svg";
 
 const Container = styled.div`
   position: relative;
@@ -66,14 +66,34 @@ const Img = styled.img`
 `;
 const Icons = styled.div``;
 Icons.Delete = styled(delet)`
-  position: absolute;
-  top: -30px;
-  right: -50px;
+  padding: 8px;
+  cursor: pointer;
 `;
 Icons.Edit = styled(edit)`
+  padding: 8px;
+  cursor: pointer;
+`;
+const Box = styled.div`
+  /* width: 16px; */
+  /* height: 16px; */
+  margin-top: ${({ blue }) => (blue ? "1px" : 0)};
+  border-radius: ${({ blue }) =>
+    blue ? "0px 6px 6px 6px" : "6px 6px 6px 0px"};
+  background-color: ${({ blue }) => (blue ? "#6200EE" : "#FF4D4F")};
+`;
+const BoxIcons = styled.div`
   position: absolute;
-  right: -50px;
-  top: 150px;
+  left: 335px;
 `;
 
-export { Img, Icons, Pages, Publish, TextBottom, Container, Text };
+export {
+  Img,
+  Icons,
+  Pages,
+  Publish,
+  TextBottom,
+  Container,
+  Text,
+  Box,
+  BoxIcons,
+};

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Icons, Img, Pages, Publish, Text, TextBottom } from './style'
+import { Box, BoxIcons, Container, Icons, Img, Pages, Publish, Text, TextBottom } from './style'
 import CryptoJs from 'crypto-js'
 
 
@@ -73,15 +73,27 @@ const Card = ({
             <Publish>{author}: {published}</Publish>
             <Pages>{pages} pages</Pages>
         </TextBottom>
-        
-            <Icons.Delete onClick={ (e)=>{
+            <BoxIcons>
+              <Box className='icon'  onClick={ (e)=>{
+              e.stopPropagation();
+              Delete(id)} } >
+              <Icons.Delete/>
+              </Box>
+              <Box className='icon' blue={'true'} onClick={ (e)=>{
+              e.stopPropagation();
+              Edit(id)} } >
+                <Icons.Edit/>
+              </Box>
+            </BoxIcons>
+            
+            {/* <Icons.Delete onClick={ (e)=>{
               e.stopPropagation();
               Delete(id)} } 
               className={'icon'}/>
             <Icons.Edit onClick={(e)=>{
               e.stopPropagation();
               Edit(id)
-              }} className={'icon'}/>
+              }} className={'icon'}/> */}
         
     </Container>
   )
