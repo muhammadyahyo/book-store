@@ -11,7 +11,6 @@ import { useQuery } from "react-query";
 import uzeReplace from '../../hooks/useReplace';
 import { useNavigate, useLocation } from "react-router-dom";
 import useSearch from '../../hooks/useSearch';
-// import { useParams } from 'react-router-dom'
 
 
 
@@ -28,7 +27,6 @@ const Home = () => {
   const navigate = useNavigate()
   const location = useLocation()
   const query = useSearch()
-  // const params = useParams()
 
 
   const Crypto = CryptoJs.MD5(`GET/booksMySecret`).toString()
@@ -38,22 +36,6 @@ const Home = () => {
     navigate(`${location?.pathname}${uzeReplace(name,value)}`)
     setTitle(value.toLowerCase())
   }
-  // useEffect(()=>{
-  //   fetch(`https://0001.uz/books/:${tit}`,{
-  //         method:"GET",
-  //           headers: {
-  //             'Content-Type': 'application/json',
-  //             'Key' : `${localStorage.getItem('key')}`,
-  //             'Sign' : `${Crypto1}`
-  //           },
-  //       }).then((res)=> res.json())
-  //       .then((res) => {
-  //         setSearchData(res?.data)
-  //         console.log(res, "res searchData");
-  //         console.log(searchData, 'seacrchData');
-  //       })
-
-  // },[location])
 
 
 
@@ -84,7 +66,6 @@ const Home = () => {
               'Key' : `${localStorage.getItem('key')}`,
               'Sign' : `${Crypto2}`
             },
-            // body: JSON.stringify(body)
           })
           .then((res)=> res.json())
           .then((res) => {
@@ -95,7 +76,6 @@ const Home = () => {
 
 
   })
-// console.log(user.data.name,'user');
   useEffect(()=>{
     let d = data?.filter(({book})=> book.title.toLowerCase().includes(tit) )
     setSearchData(d)
