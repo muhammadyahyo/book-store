@@ -150,7 +150,7 @@ const Home = () => {
               className="text-big"
             >
               You’ve got
-              <h3 className="text-big-color text-big">{data?.length} book</h3>{" "}
+              <h3 className="text-big-color text-big">{(data?.length) || 0} book</h3>{" "}
             </div>
             <p className="text-small">Your task today</p>
           </div>
