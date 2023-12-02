@@ -59,7 +59,7 @@ const Home = () => {
 
   const {refetch} = useQuery([], ()=>{
     if(localStorage.getItem('key')=== null){
-          navigate('/signin')
+          navigate('/signup')
         } else{
           navigate('/home')
         }
