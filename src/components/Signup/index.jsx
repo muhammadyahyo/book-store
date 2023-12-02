@@ -30,9 +30,13 @@ const Signup = () => {
     })
     .then((res)=> res.json())
     .then((res) => {
-      // alert(JSON.stringify(res, "email"))
-      navigate('/signin')
+      if(res.isOk){
+        navigate('/signin')
       console.log(res);
+      } else {
+        alert("User with this key already exists")
+      }
+      
     })
   }
 
