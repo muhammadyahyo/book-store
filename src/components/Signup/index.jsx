@@ -1,9 +1,9 @@
+import { TextField } from "@mui/material";
+import CryptoJs from 'crypto-js';
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { Box, Container, Icons, Social, Text } from "./style";
-import { TextField } from "@mui/material";
 import Button from "../Generic/Button";
-import CryptoJs from 'crypto-js'
+import { Box, Container, Icons, Social, Text } from "./style";
 
 const Signup = () => {
   const [body, setBody] = useState({})
@@ -21,7 +21,7 @@ const Signup = () => {
   const onSubmit =async()=>{
     console.log(body);
     
-     await fetch(`https://0001.uz/signup`,{
+     await fetch(`https://no23.lavina.tech/signup`,{
       method:"POST",
       headers: {
         'Content-Type': 'application/json'

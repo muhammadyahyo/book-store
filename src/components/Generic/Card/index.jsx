@@ -1,6 +1,6 @@
+import CryptoJs from 'crypto-js'
 import React from 'react'
 import { Box, BoxIcons, Container, Icons, Img, Pages, Publish, Text, TextBottom } from './style'
-import CryptoJs from 'crypto-js'
 
 
 const Card = ({
@@ -19,7 +19,7 @@ const Card = ({
   const Delete =(id)=>{
     const Crypto = CryptoJs.MD5(`DELETE/books/${id}MySecret`).toString()
     console.log('Delete',id, Crypto, `DELETE/books/${id}MySecret`); 
-    fetch(`https://0001.uz/books/${id}`,{
+    fetch(`https://no23.lavina.tech/books/${id}`,{
       method: "DELETE",
       headers:{
         'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const Card = ({
     const Crypto = CryptoJs.MD5(`PATCH/books/${id}{"status": 3}MySecret`).toString()
 
     console.log('Patch',id, Crypto, `PATCH/books/${id}{"status":3}MySecret`); 
-    fetch(`https://0001.uz/books/${id}`,{
+    fetch(`https://no23.lavina.tech/books/${id}`,{
       method: "PATCH",
       headers:{
         'Content-Type': 'application/json',

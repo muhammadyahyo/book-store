@@ -1,9 +1,8 @@
-import React, { useContext, useState } from 'react'
-import { Box, Modal, Typography } from '@mui/material';
-import { TextField } from "@mui/material";
-import Button from '../Generic/Button';
-import CryptoJs from 'crypto-js'
+import { Box, Modal, TextField, Typography } from '@mui/material';
+import CryptoJs from 'crypto-js';
+import React, { useContext, useState } from 'react';
 import { PropertiesContext } from '../../context/properties';
+import Button from '../Generic/Button';
 
 
 
@@ -26,7 +25,7 @@ const ModalCreate = ({handleClose,open, refetch}) => {
   const onSubmit =()=>{
     console.log(body.isbn, 'submit');
     
-      fetch(`https://0001.uz/books`,{
+      fetch(`https://no23.lavina.tech/books`,{
       method:"POST",
       headers: {
         'Content-Type': 'application/json',

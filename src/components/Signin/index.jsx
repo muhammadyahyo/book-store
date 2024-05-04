@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Box, Container, Icons, Social, Text } from "./style";
 import { TextField } from "@mui/material";
-import Button from "../Generic/Button";
+import CryptoJs from 'crypto-js';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CryptoJs from 'crypto-js'
+import Button from "../Generic/Button";
+import { Box, Container, Icons, Social, Text } from "./style";
 
 
 const Signin = () => {
@@ -23,7 +23,7 @@ const Signin = () => {
     const onSubmit =async()=>{
       console.log(body);
       
-     await fetch(`https://0001.uz/myself`,{
+     await fetch(`https://no23.lavina.tech/myself`,{
         method:"GET",
         headers: {
           'Content-Type': 'application/json',

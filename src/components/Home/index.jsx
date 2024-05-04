@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { BoxNav, Container, Icons, Inbox, Input, InputBox, BoxHome, TextBox, InputHome, CardHome } from './style'
 import ButtonMui from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Button from '../Generic/Button'
-import Card from '../Generic/Card';
-import CryptoJs from 'crypto-js'
-import ModalCreate from '../Modal';
+import CryptoJs from 'crypto-js';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from "react-query";
+import { useLocation, useNavigate } from "react-router-dom";
 import uzeReplace from '../../hooks/useReplace';
-import { useNavigate, useLocation } from "react-router-dom";
 import useSearch from '../../hooks/useSearch';
+import Button from '../Generic/Button';
+import Card from '../Generic/Card';
+import ModalCreate from '../Modal';
+import { BoxHome, BoxNav, CardHome, Container, Icons, Inbox, Input, InputBox, InputHome, TextBox } from './style';
 
 
 
@@ -46,7 +46,7 @@ const Home = () => {
           navigate('/home')
         }
 
-     fetch(`https://0001.uz/books`,{
+     fetch(`https://no23.lavina.tech/books`,{
             method:"GET",
               headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const Home = () => {
             console.log(res, "books");
           })
       
-          fetch(`https://0001.uz/myself`,{
+          fetch(`https://no23.lavina.tech/myself`,{
             method:"GET",
             headers: {
               'Content-Type': 'application/json',
